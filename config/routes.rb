@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :cats
+  devise_for :users
   resources :comments, only: [:create, :destroy]
   get 'pages/info'
 
